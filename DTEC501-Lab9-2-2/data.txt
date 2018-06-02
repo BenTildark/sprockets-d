@@ -1,0 +1,5 @@
+off
+on
+on_and_off
+neither_on_or_off
+but_in_another_state

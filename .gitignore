@@ -1,0 +1,9 @@
+# Ignore any files in venv directory.
+venv/
+
+# Ignore IDE & OS self generated files.
+.DS_Store
+.idea
+
+# Ignore keylogger logs
+pynput
