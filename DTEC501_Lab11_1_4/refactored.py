@@ -49,3 +49,222 @@ for rm in rm_20:
 
 # REM: blot out tests before running this...
 # py3 -c 'from refactored import check_computer_name; print("\n" + check_computer_name.__doc__ + "\n"); print(check_computer_name("S265-08"))'
+
+# MOODLE TEST RESULTS
+
+"""
+TechLabs needs a function to test the validity of the student computer names in the rooms.
+
+The rooms that TechLabs uses are: S264, S265, S267 and S268.
+
+ 
+
+The format of the computer name is
+
+BuildingRoom-ComputerNumber
+
+Building is currently "S" for S block.  Building is always upper case.
+
+Room can be one of 264, 265, 267 or 268.
+
+The - is a significant character and is always in the 4th position in the string.
+
+ComputerNumber varies from 01 to 22 depending on the room. All rooms have 20 student computers except S265 which has 22.  ComputerNumber is always 2 digits.
+
+ 
+
+Examples of valid computer names are
+
+S264-01
+
+S264-20
+
+Create a function called check_computer_name
+
+check_computer_name has 1 parameter
+
+check_computer_name returns True if the string it received represents a valid computer name.
+
+check_computer_name returns False if the string it received does not represent a valid computer name.
+
+ 
+
+It is advisable that the code in your function be written in a manner which allows TechLabs to expand into other buildings.  For this question though, only S block will be used.
+
+ 
+
+Hints.
+
+Think about the requirements and how they map onto conditional statements.
+The conditional statements are not complex, subsequently there is no need for complex nested conditional statements.
+After the variables have been declared, the main section of code is about 17 lines in length.
+Remember how to use the index to get to individual characters in a string.
+ 
+
+Examples
+ 
+print(check_computer_name("S264-01"))
+
+True
+
+ 
+
+print(check_computer_name("S264-00"))
+
+False
+
+ 
+
+print(check_computer_name("X264-00"))
+
+False
+
+ 
+
+ 
+
+Post the function code below, not your testing code.
+
+ 
+
+Answer:(penalty regime: 10, 20, ... %)
+
+
+Feedback
+Test	Expected	Got	
+Correct	
+print(check_computer_name("S264-01"))
+True
+True
+Correct
+Correct	
+print(check_computer_name("S264-20"))
+True
+True
+Correct
+Correct	
+print(check_computer_name("S265-01"))
+True
+True
+Correct
+Correct	
+print(check_computer_name("S265-22"))
+True
+True
+Correct
+Correct	
+print(check_computer_name("S267-01"))
+True
+True
+Correct
+Correct	
+print(check_computer_name("S267-20"))
+True
+True
+Correct
+Correct	
+print(check_computer_name("S268-01"))
+True
+True
+Correct
+Correct	
+print(check_computer_name("S268-20"))
+True
+True
+Correct
+Correct	
+print(check_computer_name("S264-00"))
+False
+False
+Correct
+Correct	
+print(check_computer_name("S264-21"))
+False
+False
+Correct
+Correct	
+print(check_computer_name("S265-00"))
+False
+False
+Correct
+Correct	
+print(check_computer_name("S265-23"))
+False
+False
+Correct
+Correct	
+print(check_computer_name("S267-00"))
+False
+False
+Correct
+Correct	
+print(check_computer_name("S267-21"))
+False
+False
+Correct
+Correct	
+print(check_computer_name("S268-00"))
+False
+False
+Correct
+Correct	
+print(check_computer_name("S268-21"))
+False
+False
+Correct
+Correct	
+print(check_computer_name("S263-01"))
+False
+False
+Correct
+Correct	
+print(check_computer_name("S263-20"))
+False
+False
+Correct
+Correct	
+print(check_computer_name("X264-20"))
+False
+False
+Correct
+Correct	
+if (check_computer_name.__doc__):
+    print("docstring present")
+else:
+    print("docstring not present")
+docstring present
+docstring present
+Correct
+Correct	
+# Check the return type
+pc_id = "S263-20"
+valid_pc = check_computer_name(pc_id)
+if type(valid_pc) == bool:
+    print("The function returned a boolean. :-)")
+else:
+    print("The function did not return a boolean. :-(")
+The function returned a boolean. :-)
+The function returned a boolean. :-)
+Correct
+Correct	
+print(check_computer_name("s264-20"))
+False
+False
+Correct
+Correct	
+print(check_computer_name("S-26420"))
+False
+False
+Correct
+Correct	
+print(check_computer_name("S-264-20"))
+False
+False
+Correct
+Correct	
+print(check_computer_name("S264-1"))
+False
+False
+Correct
+Passed all tests!  Correct
+"""
