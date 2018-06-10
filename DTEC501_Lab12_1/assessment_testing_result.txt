@@ -1,0 +1,725 @@
+Started on	Sunday, 10 June 2018, 11:49 PM
+State	Finished
+Completed on	Monday, 11 June 2018, 1:29 AM
+Time taken	1 hour 39 mins
+Grade	28.00 out of 28.00 (100%)
+
+Assessment 2 revision lab
+DTEC501 Assessment 2 revision.
+Semester 2 2017.
+Week starting Monday 23rd October
+S255
+Total time 1 hour 50  minutes
+10 minutes reading time are allocated at the start.  The 10 minutes is included in the time above.
+
+Assessment 2 is weighted as 30% of the overall mark for the course.
+
+
+
+There are 16 marks available for this revision assessment.  See the marking guide for details of the individual marks.
+
+A 50% overall mark is required to pass the course.
+
+There is no minimum pass mark for this revision assessment.
+
+This revision assessment is done under exam conditions.
+
+You are not allowed to communicate or attempt to communicate with anybody anywhere other than the staff present in the revision assessment room.
+
+This revision assessment is open book.
+
+You may use all the resources listed in the DTEC501 course in Moodle and any learning material resource on the internet.
+
+You are allowed to access and use your previously written code.
+
+This is a revision lab.  It does not count towards your course marks.
+Information
+Not flaggedFlag question
+Information text
+In this revision quiz, there are 16 marks in total.
+
+
+
+Question	Marks
+1	4
+2	8
+3	6
+4	5
+5	5
+
+
+The marks for the current question can be seen in the top left had corner of the question section.
+
+Partial marks are available for each question.
+
+Marks are awarded as 1 mark each for each task in the question.
+
+Typically 1 mark is awarded for correctly handling each parameter and for displaying and/or returning the correct value.
+
+Information
+Not flaggedFlag question
+Information text
+This page has been included as a reminder of what code needs to be submitted and what code must not be submitted.
+
+You will create a function as your answer to each question in this assessment.  It is important to only submit the code for your function.
+
+
+
+Examples.
+
+
+Write a function which returns a value.
+If the question says to create a function called times_two which returns double the value that was passed to the function then the function below is the correct one to use.
+
+def times_two(value):
+""" The function returns double the value it receives """
+
+    multiplier = 2
+    product = value * multiplier
+    return product
+
+
+
+To test your code you could write the following code
+
+print(times_two(2))
+4
+
+print(times_two(3))
+6
+
+print(times_two(5))
+10
+
+
+
+It is important that you only paste the function code to Moodle so in this case, only submit the following:
+
+
+
+def times_two(value):
+""" The function returns double the value it receives """
+
+    multiplier = 2
+    product = value * multiplier
+    return product
+
+
+
+Write a function which prints a message.
+If the question says to create a function called add_two which prints the value that was passed to the function plus 2 in a suitable message then the function below is the correct one to use.
+
+def add_two(value):
+    """ The function prints the value received + 2"""
+
+    two = 2
+    total = value + two
+    print("{} + {} = {}".format(value, two,total))
+    return
+
+
+
+This can be tested as follows.
+
+add_two(2)
+2 + 2 = 4
+
+add_two(4)
+4 + 2 = 6
+
+It is important that you only paste the function code to Moodle so in this case, only submit the following:
+
+def add_two(value):
+    """ The function prints the value received + 2"""
+
+    two = 2
+    total = value + two
+    print("{} + {} = {}".format(value, two,total))
+    return
+
+
+
+
+
+Information
+Not flaggedFlag question
+Information text
+Not every test that is used to mark your code is shown in the examples.  It is your responsibility to thoroughly test your code.
+All functions require parameters to be passed by position.  The parameters must be passed in the order they shown in the questions.
+Question 1
+Correct
+Mark 4.00 out of 4.00
+Not flaggedFlag question
+Question text
+Write a function called get_initials which returns the initials of the full name that is passed to the function.
+
+The function get_initials  expects one parameter
+
+full_name
+
+full_name contains the full name of the user.
+
+The get_initials function does not display any output.
+
+The get_initials function returns a string which is the initials of the user in upper case.
+
+Assume the user will only have two names.
+
+
+
+Example test code and output
+
+
+print(get_initials("Dave bracken"))
+
+DB
+
+
+
+
+
+first_name = "dave"
+last_name = "bracken"
+name_separator = " "
+full_name = first_name + name_separator + last_name
+
+user_initials = get_initials(full_name)
+print(user_initials)
+
+DB
+
+
+
+Paste the function code below, not your testing code.
+
+Answer:(penalty regime: 10, 20, ... %)
+
+
+Feedback
+Test	Expected	Got
+Correct
+print(get_initials("Dave bracken"))
+DB
+DB
+Correct
+Correct
+print(get_initials("uncle Bulgaria"))
+UB
+UB
+Correct
+Correct
+# Check for docstring
+if (get_initials.__doc__):
+    print("Docstring present")
+else:
+    print("Docstring not present")
+Docstring present
+Docstring present
+Correct
+Correct
+# Check return type
+full_name = "Dave Bracken"
+return_value = get_initials(full_name)
+if type(return_value) == str:
+    print("Correct return type.")
+else:
+    print("Incorrect return type.")
+Correct return type.
+Correct return type.
+Correct
+Passed all tests!  Correct
+
+Correct
+Marks for this submission: 4.00/4.00.
+Question 2
+Correct
+Mark 8.00 out of 8.00
+Not flaggedFlag question
+Question text
+This is a "think a little bit outside the box" type question.
+
+Create 2 functions
+
+is_even
+find_even
+
+
+is_even expects 1 parameter
+the_value
+the_value is an integer.
+
+
+
+is_even will return the boolean value True if the_value is an even number.
+is_even will return the boolean value False if the_value is not an even number.
+
+The is_even function does not display any output
+
+
+
+find_even expects 1 parameter.
+
+the_list
+the_list is a list object containing integers.
+
+The find_even function does not display any output
+
+The find_even function will return a list of even integers. It will make use of the is_even function by calling/invoking it.
+
+
+
+Example test code and output
+
+
+print(is_even(99))
+
+False
+
+
+
+print(is_even(20))
+
+True
+
+
+
+age = 41
+even_age = is_even(age)
+print("It is {} that your age is even.".format(even_age))
+
+It is False that your age is even.
+
+
+
+
+
+a_list = [50,23,30,41,99]
+print(find_even(a_list))
+
+[50, 30]
+
+
+
+
+a_list = [17,11,22,21,44]
+print(find_even(a_list))
+
+[22, 44]
+
+
+
+
+
+Paste the code from both of the functions below.  Do not paste your testing code.
+
+Answer:(penalty regime: 10, 20, ... %)
+
+
+Feedback
+Test	Expected	Got
+Correct
+print(is_even(10))
+True
+True
+Correct
+Correct
+print(is_even(3))
+False
+False
+Correct
+Correct
+a_list = [50,23,30,41]
+print(find_even(a_list))
+[50, 30]
+[50, 30]
+Correct
+Correct
+a_list = [17,11,22,21]
+print(find_even(a_list))
+[22]
+[22]
+Correct
+Correct
+# Check for docstring
+if (is_even.__doc__):
+    print("Docstring present")
+else:
+    print("Docstring not present")
+Docstring present
+Docstring present
+Correct
+Correct
+# Check for docstring
+if (find_even.__doc__):
+    print("Docstring present")
+else:
+    print("Docstring not present")
+Docstring present
+Docstring present
+Correct
+Correct
+# Check return type
+number = 10
+return_value = is_even(number)
+if type(return_value) == bool:
+    print("Correct return type.")
+else:
+    print("Incorrect return type.")
+Correct return type.
+Correct return type.
+Correct
+Correct
+# Check return type
+numbers = 10,21,30,51
+return_value = find_even(numbers)
+if type(return_value) == list:
+    print("Correct return type.")
+else:
+    print("Incorrect return type.")
+Correct return type.
+Correct return type.
+Correct
+Passed all tests!  Correct
+
+Correct
+Marks for this submission: 8.00/8.00.
+Question 3
+Correct
+Mark 6.00 out of 6.00
+Not flaggedFlag question
+Question text
+Create a function called valid_password which returns True or False depending on the validity of the password.
+
+The function valid_password  expects 2 parameters
+
+the_password and min_length
+
+the_password contains the password to be tested.
+
+min_length is an integer value for the minimum length of the password.
+
+The valid_password function does not display any output.
+
+The valid_password function returns the boolean value True if the length of the_password > min_length and the_password is not comprised of only alphabetic characters.
+
+The valid_password function returns the boolean value False if the length of the_password < min_length or if the_password is comprised of only alphabetic characters.
+
+
+
+Example test code and output
+
+
+user_password = "very_short"
+password_min_length = 12
+password_secure = valid_password(user_password, password_min_length)
+if password_secure:
+    print("Your password meets the security requirements.")
+else:
+    print("Your password does not meet the security requirements.")
+
+Your password does not meet the security requirements.
+
+
+
+
+
+print(valid_password("too_short",20))
+
+False
+
+
+
+
+
+print(valid_password("g00d",3))
+
+True
+
+
+
+
+
+
+
+Paste the function code below, not your testing code.
+
+Answer:(penalty regime: 10, 20, ... %)
+
+
+Feedback
+Test	Expected	Got
+Correct
+print(valid_password("too_short",20))
+False
+False
+Correct
+Correct
+print(valid_password("g00d",3))
+True
+True
+Correct
+Correct
+print(valid_password("alpha",5))
+False
+False
+Correct
+Correct
+print(valid_password("alpha1",5))
+True
+True
+Correct
+Correct
+# Check for docstring
+if (valid_password.__doc__):
+    print("Docstring present")
+else:
+    print("Docstring not present")
+Docstring present
+Docstring present
+Correct
+Correct
+# Check return type
+user_password = "very_short"
+password_min_length = 12
+return_value = valid_password(user_password, password_min_length)
+
+if type(return_value) == bool:
+    print("Correct return type.")
+else:
+    print("Incorrect return type.")
+Correct return type.
+Correct return type.
+Correct
+Passed all tests!  Correct
+
+Correct
+Marks for this submission: 6.00/6.00.
+Question 4
+Correct
+Mark 5.00 out of 5.00
+Not flaggedFlag question
+Question text
+Create a function called valid_name which returns True or False depending on the validity of the name.
+
+The function valid_name  expects 2 parameters
+
+the_name and min_length
+
+the_name contains the name to be tested.
+
+min_length is an integer value for the minimum length of the name.
+
+The valid_name function does not display any output.
+
+The valid_name function returns the boolean value True if the length of the_name > min_length and the_name is comprised of only alphabetic characters.
+
+The valid_name function returns the boolean value False if the length of the_name < min_length or if the_name is not comprised of only alphabetic characters.
+
+
+
+Example test code and output
+
+
+first_name = "Dave"
+name_length = 2
+
+name_valid = valid_name(first_name, name_length)
+if name_valid:
+    print("Your name meets the requirements.")
+else:
+    print("Your name does not meet the requirements.")
+
+Your name meets the requirements.
+
+
+
+
+
+first_name = "0lafTheSnowman"
+name_length = 2
+
+name_valid = valid_name(first_name, name_length)
+if name_valid:
+    print("Your name meets the requirements.")
+else:
+    print("Your name does not meet the requirements.")
+
+Your name does not meet the requirements.
+
+
+
+
+
+print(valid_name("Dave",2))
+
+True
+
+
+
+print(valid_name("Jane",5))
+
+False
+
+
+
+
+
+Paste the function code below, not your testing code.
+
+Answer:(penalty regime: 10, 20, ... %)
+
+
+Feedback
+Test	Expected	Got
+Correct
+print(valid_name("Dave",2))
+True
+True
+Correct
+Correct
+print(valid_name("Jane",5))
+False
+False
+Correct
+Correct
+print(valid_name("alpha1",2))
+False
+False
+Correct
+Correct
+# Check for docstring
+if (valid_name.__doc__):
+    print("Docstring present")
+else:
+    print("Docstring not present")
+Docstring present
+Docstring present
+Correct
+Correct
+# Check return type
+first_name = "0lafTheSnowman"
+name_length = 2
+
+return_value = valid_name(first_name, name_length)
+
+if type(return_value) == bool:
+    print("Correct return type.")
+else:
+    print("Incorrect return type.")
+Correct return type.
+Correct return type.
+Correct
+Passed all tests!  Correct
+
+Correct
+Marks for this submission: 5.00/5.00.
+Question 5
+Correct
+Mark 5.00 out of 5.00
+Not flaggedFlag question
+Question text
+Create a function called string_length which returns the length of a string excluding the characters specified.
+
+The function string_length  expects 2 parameters
+
+the_string and excluded_character
+
+the_string contains the string of characters to be be examined.
+
+excluded_character is the character that should not be included in the length of the string.
+
+The string_length function does not display any output.
+
+The string_length function returns an integer which is the length of the_string without counting all the instances of excluded_character.
+
+
+
+Example test code and output
+
+
+full_name = "Olaf_the_snowman"
+unwanted_char = "_"
+name_length = string_length(full_name, unwanted_char)
+print("{} contains {} alphabetic characters.".format(full_name, name_length))
+
+Olaf_the_snowman contains 14 alphabetic characters.
+
+
+
+
+
+print(string_length("Dave","a"))
+
+3
+
+
+print(string_length("Jane"," "))
+
+4
+
+
+print(string_length("Abraham","a"))
+
+5
+
+
+
+
+
+Paste the function code below, not your testing code.
+
+Answer:(penalty regime: 10, 20, ... %)
+
+
+Feedback
+Test	Expected	Got
+Correct
+print(string_length("Dave","a"))
+3
+3
+Correct
+Correct
+print(string_length("Jane"," "))
+4
+4
+Correct
+Correct
+print(string_length("Abraham","a"))
+5
+5
+Correct
+Correct
+# Check for docstring
+if (string_length.__doc__):
+    print("Docstring present")
+else:
+    print("Docstring not present")
+Docstring present
+Docstring present
+Correct
+Correct
+# Check return type
+full_name = "Olaf_the_snowman"
+unwanted_char = "_"
+return_value = string_length(full_name, unwanted_char)
+
+if type(return_value) == int:
+    print("Correct return type.")
+else:
+    print("Incorrect return type.")
+Correct return type.
+Correct return type.
+Correct
+Passed all tests!  Correct
+
+Correct
+Marks for this submission: 5.00/5.00.
+Information
+Not flaggedFlag question
+Information text
+This is the end of the revision for Assessment 2
+
+
+Ensure you have answered all the questions.
+After you have checked that you have uploaded your code, click "Finish attempt ..." followed by "Submit all and finish".
+Click "Submit all and finish" again to confirm you have completed the assessment.

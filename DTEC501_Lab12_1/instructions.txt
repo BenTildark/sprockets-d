@@ -1,0 +1,83 @@
+"""
+This page has been included as a reminder of what code needs to be submitted and what code must not be submitted.
+
+You will create a function as your answer to each question in this assessment.  It is important to only submit the code for your function.
+
+
+
+Examples.
+
+
+Write a function which returns a value.
+If the question says to create a function called times_two which returns double the value that was passed to the
+function then the function below is the correct one to use.
+
+def times_two(value):
+#  The function returns double the value it receives
+
+    multiplier = 2
+    product = value * multiplier
+    return product
+
+
+
+To test your code you could write the following code
+
+print(times_two(2))
+4
+
+print(times_two(3))
+6
+
+print(times_two(5))
+10
+
+
+
+It is important that you only paste the function code to Moodle so in this case, only submit the following:
+
+
+
+def times_two(value):
+#  The function returns double the value it receives
+
+    multiplier = 2
+    product = value * multiplier
+    return product
+
+
+
+Write a function which prints a message.
+If the question says to create a function called add_two which prints the value that was passed to the
+function plus 2 in a suitable message then the function below is the correct one to use.
+
+def add_two(value):
+#     The function prints the value received + 2
+
+    two = 2
+    total = value + two
+    print("{} + {} = {}".format(value, two,total))
+    return
+
+
+
+This can be tested as follows.
+
+add_two(2)
+2 + 2 = 4
+
+add_two(4)
+4 + 2 = 6
+
+It is important that you only paste the function code to Moodle so in this case, only submit the following:
+
+def add_two(value):
+#     The function prints the value received + 2
+
+    two = 2
+    total = value + two
+    print("{} + {} = {}".format(value, two,total))
+    return
+
+
+"""

@@ -46,6 +46,46 @@ for rm in rm_20:
         print("{}-{}".format(rm, pcn_z))
         print(check_computer_name("{}-{}".format(rm, pcn_z)))
 
+# development env test results
+
+"""
+
+S265-22
+True
+S265-23
+False
+S265-00
+False
+S265-01
+True
+S264-20
+True
+S264-21
+False
+S264-00
+False
+S264-01
+True
+S267-20
+True
+S267-21
+False
+S267-00
+False
+S267-01
+True
+S268-20
+True
+S268-21
+False
+S268-00
+False
+S268-01
+True
+
+Process finished with exit code 0
+
+"""
 
 # REM: blot out tests before running this...
 # py3 -c 'from refactored import check_computer_name; print("\n" + check_computer_name.__doc__ + "\n"); print(check_computer_name("S265-08"))'
