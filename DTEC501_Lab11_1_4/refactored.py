@@ -7,8 +7,7 @@ def check_computer_name(entry):
 
     valid_pc_name = []
 
-    block = "S"
-    valid_room = {'1': '264', '2': '265', '3': '267', '4': '268'}
+    valid_room = {'1': 'S264-', '2': 'S265-', '3': 'S267-', '4': 'S268-'}
 
     count_twenty_two = ['2']
 
@@ -18,11 +17,12 @@ def check_computer_name(entry):
         else:
             pc_number = range(1, 23)
         for i in pc_number:
-            if i in range(1, 10):
-                i = "0" + str(i)
-            valid_pc = block + valid_room[key] + "-" + str(i)
-            valid_pc_name.append(valid_pc)
-
+            # concat "roomNumber-" item with each i str("01")
+            # prepend '0' to string_width less than 2 [ 1-9 ] 01,02,03 etc 10,11,12
+            # .rjust(string_width, fill_char)
+            valid_pc_name.append(valid_room[key] + str(i).rjust(2, '0'))
+    # DEBUGGING
+    print(valid_pc_name)
     # validate True if entry in our list
     if entry.replace('"', '') in valid_pc_name:
         return True
@@ -83,7 +83,17 @@ False
 S268-01
 True
 
-Process finished with exit code 0
+S268-01
+['S264-01', 'S264-02', 'S264-03', 'S264-04', 'S264-05', 'S264-06', 'S264-07', 'S264-08', 'S264-09', 'S264-10',
+ 'S264-11', 'S264-12', 'S264-13', 'S264-14', 'S264-15', 'S264-16', 'S264-17', 'S264-18', 'S264-19', 'S264-20',
+ 'S265-01', 'S265-02', 'S265-03', 'S265-04', 'S265-05', 'S265-06', 'S265-07', 'S265-08', 'S265-09', 'S265-10',
+ 'S265-11', 'S265-12', 'S265-13', 'S265-14', 'S265-15', 'S265-16', 'S265-17', 'S265-18', 'S265-19', 'S265-20',
+ 'S265-21', 'S265-22', 'S267-01', 'S267-02', 'S267-03', 'S267-04', 'S267-05', 'S267-06', 'S267-07', 'S267-08',
+ 'S267-09', 'S267-10', 'S267-11', 'S267-12', 'S267-13', 'S267-14', 'S267-15', 'S267-16', 'S267-17', 'S267-18',
+ 'S267-19', 'S267-20', 'S268-01', 'S268-02', 'S268-03', 'S268-04', 'S268-05', 'S268-06', 'S268-07', 'S268-08',
+ 'S268-09', 'S268-10', 'S268-11', 'S268-12', 'S268-13', 'S268-14', 'S268-15', 'S268-16', 'S268-17', 'S268-18',
+ 'S268-19', 'S268-20']
+True
 
 """
 
